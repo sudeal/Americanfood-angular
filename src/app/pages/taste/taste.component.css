@@ -90,7 +90,7 @@
   object-fit: contain;
 }
 
-/* En altta design */
+
 .taste-image-design {
   width: 500px;
   height: auto;
@@ -105,7 +105,7 @@
   width: 450px;
   height: auto;
   z-index: 2;
-  bottom: 140px;
+  bottom: 70px; 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -140,7 +140,7 @@
   
   .taste-image-hamburger {
     width: 380px;
-    bottom: 100px;
+    bottom: 60px;
   }
 }
 
@@ -183,7 +183,7 @@
   
   .taste-image-hamburger {
     width: 300px;
-    bottom: 100px;
+    bottom: 60px;
   }
 }
 
@@ -230,6 +230,6 @@
   
   .taste-image-hamburger {
     width: 240px;
-    bottom: 80px;
+    bottom: 50px;
   }
 }
