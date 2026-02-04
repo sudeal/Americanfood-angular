@@ -1,4 +1,3 @@
-
 .map-section {
   width: 100%;
   margin: 0;
@@ -22,16 +21,9 @@
   z-index: 0;
 }
 
-/* Google Maps iframe içindeki "New York" bilgi kartını kapatmak için overlay */
+/* ❌ SOLDAN BOŞLUK YARATAN OVERLAY DEVRE DIŞI */
 .map-info-card-cover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 320px;
-  height: 160px;
-  z-index: 1;
-  background-color: #f0f0f0;
-  pointer-events: none;
+  display: none;
 }
 
 .map-iframe {
@@ -54,7 +46,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
   padding: 40px 32px 40px 48px;
+
   box-sizing: border-box;
   pointer-events: auto;
 }
@@ -103,7 +97,6 @@
   margin-bottom: 20px;
 }
 
-
 .card.map-card .form-control {
   background-color: #f0f0f0;
   border: 1px solid #e5e5e5;
@@ -130,7 +123,6 @@
   font-family: inherit;
 }
 
-
 .map-btn {
   width: 100%;
   padding: 14px 20px;
@@ -156,9 +148,9 @@
 /* Responsive */
 @media (max-width: 900px) {
   .map-container {
-    padding: 30px 24px;
+    padding: 30px 24px 30px 40px;
   }
-  
+
   .card.map-card {
     width: 90%;
     max-width: 400px;
@@ -166,11 +158,11 @@
     min-height: 480px;
     margin-top: 3vh;
   }
-  
+
   .card.map-card .card-body {
     padding: 36px 40px 40px;
   }
-  
+
   .map-card-title {
     font-size: 1.5rem;
     margin-bottom: 28px !important;
@@ -179,9 +171,9 @@
 
 @media (max-width: 650px) {
   .map-container {
-    padding: 20px 16px;
+    padding: 20px 16px 20px 24px;
   }
-  
+
   .card.map-card {
     width: 90%;
     max-width: 400px;
@@ -190,32 +182,31 @@
     margin-top: 2vh;
     border-radius: 12px;
   }
-  
+
   .card.map-card .card-body {
     padding: 32px 24px 36px;
   }
-  
+
   .map-card-title {
     font-size: 1.375rem;
     margin-bottom: 24px !important;
   }
-  
+
   .map-form-group {
     margin-bottom: 20px;
   }
-  
+
   .map-form-group:last-of-type {
     margin-bottom: 24px;
   }
-  
+
   .card.map-card .form-control {
     padding: 12px 16px;
     font-size: 15px;
   }
-  
+
   .map-btn {
     padding: 14px 20px;
     font-size: 15px;
   }
 }
-
