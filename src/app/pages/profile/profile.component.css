@@ -157,3 +157,20 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 16px 12px;
+  }
+  .profile-container {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 20px;
+  }
+  .profile-title {
+    font-size: 24px;
+  }
+  .profile-text {
+    font-size: 13px;
+  }
+}

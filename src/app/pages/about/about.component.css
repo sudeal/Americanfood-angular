@@ -227,3 +227,18 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 16px 12px;
+  }
+  .about-container {
+    padding-top: 40px;
+  }
+  .about-title {
+    font-size: 26px;
+  }
+  .about-description {
+    font-size: 13px;
+  }
+}

@@ -233,3 +233,30 @@
     bottom: 50px;
   }
 }
+
+@media (max-width: 480px) {
+  .taste-section {
+    padding: 16px 12px;
+  }
+  .taste-container {
+    padding: 0 12px;
+    gap: 24px;
+  }
+  .taste-title {
+    font-size: 24px;
+  }
+  .taste-description {
+    font-size: 13px;
+  }
+  .taste-images-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+  .taste-image-design {
+    width: 260px;
+  }
+  .taste-image-hamburger {
+    width: 200px;
+    bottom: 40px;
+  }
+}

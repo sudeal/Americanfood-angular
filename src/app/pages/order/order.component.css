@@ -213,3 +213,26 @@
     max-width: 300px;
   }
 }
+
+@media (max-width: 480px) {
+  .order-section {
+    padding: 16px 12px;
+  }
+  .order-container {
+    padding: 0 8px;
+    gap: 24px;
+  }
+  .order-title {
+    font-size: 26px;
+  }
+  .order-description {
+    font-size: 13px;
+  }
+  .order-images-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+  .order-image-main {
+    max-width: 260px;
+  }
+}

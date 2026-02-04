@@ -224,3 +224,25 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .recipe-section {
+    padding: 16px 12px;
+  }
+  .recipe-container {
+    padding-top: 40px;
+  }
+  .recipe-title {
+    font-size: 26px;
+  }
+  .recipe-description {
+    font-size: 13px;
+  }
+  .recipe-card-image {
+    height: 200px;
+  }
+  .recipe-card-name,
+  .recipe-card-price {
+    font-size: 14px;
+  }
+}

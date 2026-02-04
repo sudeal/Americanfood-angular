@@ -1,4 +1,8 @@
 /* Genel sayfa genişliği + Nunito Sans varsayılan font */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   max-width: 1980px;
   margin: 0 auto;
@@ -6,6 +10,7 @@ html, body {
   overflow-x: hidden;
   height: 100%;
   font-family: 'Nunito Sans', sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {

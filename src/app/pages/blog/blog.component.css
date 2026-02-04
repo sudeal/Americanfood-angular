@@ -57,7 +57,7 @@
   text-align: center;
 }
 
-/* Kart + şef fotoğrafı sarmalayıcı – relative, şef absolute ile konumlanacak */
+
 .blog-card-wrap {
   position: relative;
   margin-top: 40px;
@@ -67,7 +67,7 @@
   min-height: 300px;
 }
 
-/* Şef katmanı – kartın üzerinde, sol tarafta; kartın bottom-right’ına göre değil sol altına hizalı (2. foto gibi) */
+
 .blog-card-chef-layer {
   position: absolute;
   left: 0;
@@ -307,5 +307,32 @@
 
   .blog-card-role {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 16px 12px;
+  }
+  .blog-container {
+    padding-top: 40px;
+  }
+  .blog-title {
+    font-size: 26px;
+  }
+  .blog-description {
+    font-size: 13px;
+  }
+  .blog-card-wrap {
+    min-height: 200px;
+  }
+  .blog-card-text-side {
+    padding: 20px 16px 16px 48px;
+  }
+  .blog-card-name {
+    font-size: 16px;
+  }
+  .blog-card-role {
+    font-size: 12px;
   }
 }
