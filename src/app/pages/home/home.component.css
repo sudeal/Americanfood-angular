@@ -166,7 +166,7 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 960px;
   z-index: 5; /* Sarı şeklin ve yemek resminin üstünde görünsün */
 }
 

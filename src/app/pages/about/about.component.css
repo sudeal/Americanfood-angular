@@ -152,11 +152,14 @@
 @media (max-width: 900px) {
   .about-section {
     padding: 30px 16px;
+    background-image: url('/images/ikiliresim.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .about-side-image {
-    width: 20%;
-    min-width: 160px;
+    display: none;
   }
   
   .about-container {
@@ -191,11 +194,14 @@
 @media (max-width: 650px) {
   .about-section {
     padding: 20px 16px;
+    background-image: url('/images/ikiliresim.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .about-side-image {
-    width: 18%;
-    min-width: 100px;
+    display: none;
   }
   
   .about-container {
@@ -231,6 +237,13 @@
 @media (max-width: 480px) {
   .about-section {
     padding: 16px 12px;
+    background-image: url('/images/ikiliresim.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .about-side-image {
+    display: none;
   }
   .about-container {
     padding-top: 40px;

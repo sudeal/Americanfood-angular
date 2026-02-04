@@ -58,12 +58,17 @@
 }
 
 /* Recipe Cards */
+.recipe-cards-viewport {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
 .recipe-cards {
   display: flex;
   gap: 32px;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 40px;
   width: 100%;
   max-width: 1200px;
 }
@@ -110,8 +115,8 @@
   color: #4ECDC4;
 }
 
-/* Pagination Dots */
-.recipe-pagination {
+/* Pagination: sadece mobilde görünsün (HTML'de *ngIf="isMobile" ile kontrol) */
+.recipe-pagination-mobile {
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -135,6 +140,40 @@
   width: 12px;
   height: 12px;
 }
+
+/* Carousel okları – sadece mobilde */
+.recipe-carousel-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.recipe-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #4ECDC4;
+  background: #fff;
+  color: #4ECDC4;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+}
+
+.recipe-arrow:hover {
+  background: #4ECDC4;
+  color: #fff;
+}
+
+.recipe-arrow-prev { padding-bottom: 2px; }
+.recipe-arrow-next { padding-bottom: 2px; }
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -167,20 +206,40 @@
   }
   
   .recipe-container {
-    padding-top: 80px; /* Mobilde daha az padding */
+    padding-top: 80px;
   }
-  
-  .recipe-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  .recipe-card {
-    flex: 0 0 auto;
-    max-width: 100%;
+
+  /* Carousel: tek kart görünsün, oklarla kaydır */
+  .recipe-cards-viewport {
+    overflow: hidden;
     width: 100%;
-    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .recipe-cards.carousel-mode {
+    flex-direction: row;
+    width: 300%;
+    max-width: none;
+    gap: 0;
+    transition: transform 0.3s ease;
+    justify-content: flex-start;
+  }
+
+  .recipe-cards.carousel-mode .recipe-card {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    width: 33.333%;
+    box-sizing: border-box;
+    padding: 0 8px;
+  }
+
+  .recipe-cards.carousel-mode .recipe-card:first-child {
+    padding-left: 0;
+  }
+
+  .recipe-cards.carousel-mode .recipe-card:last-child {
+    padding-right: 0;
   }
 }
 

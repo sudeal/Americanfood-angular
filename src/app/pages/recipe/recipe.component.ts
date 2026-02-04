@@ -1,16 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-recipe',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.css'
 })
-export class RecipeComponent {
-  activeIndex: number = 2; // Başlangıçta 3. resim aktif (0-indexed: 0=1., 1=2., 2=3.)
+export class RecipeComponent implements OnInit {
+  activeIndex: number = 0;
+  isMobile = false;
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.isMobile = window.innerWidth <= 900;
+  }
+
+  ngOnInit(): void {
+    this.onResize();
+  }
 
   setActive(index: number): void {
     this.activeIndex = index;
+  }
+
+  prev(): void {
+    this.activeIndex = this.activeIndex === 0 ? 2 : this.activeIndex - 1;
+  }
+
+  next(): void {
+    this.activeIndex = this.activeIndex === 2 ? 0 : this.activeIndex + 1;
   }
 }

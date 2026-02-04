@@ -5,37 +5,45 @@
       <p class="recipe-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
       
      
-      <div class="recipe-cards">
-        <div class="recipe-card" (click)="setActive(0)">
-          <img src="/images/Mısır.jpg" alt="Pasta" class="recipe-card-image" />
-          <div class="recipe-card-info">
-            <span class="recipe-card-name">Pasta</span>
-            <span class="recipe-card-price">$30</span>
+      <div class="recipe-cards-viewport">
+        <div
+          class="recipe-cards"
+          [class.carousel-mode]="isMobile"
+          [style.transform]="isMobile ? 'translateX(-' + (activeIndex * 33.333) + '%)' : 'none'"
+        >
+          <div class="recipe-card" (click)="setActive(0)">
+            <img src="/images/Mısır.jpg" alt="Pasta" class="recipe-card-image" />
+            <div class="recipe-card-info">
+              <span class="recipe-card-name">Pasta</span>
+              <span class="recipe-card-price">$30</span>
+            </div>
           </div>
-        </div>
-        
-        <div class="recipe-card" (click)="setActive(1)">
-          <img src="/images/Hotdog.jpg" alt="Hot Dog" class="recipe-card-image" />
-          <div class="recipe-card-info">
-            <span class="recipe-card-name">Hod Dog</span>
-            <span class="recipe-card-price">$30</span>
+          <div class="recipe-card" (click)="setActive(1)">
+            <img src="/images/Hotdog.jpg" alt="Hot Dog" class="recipe-card-image" />
+            <div class="recipe-card-info">
+              <span class="recipe-card-name">Hod Dog</span>
+              <span class="recipe-card-price">$30</span>
+            </div>
           </div>
-        </div>
-        
-        <div class="recipe-card" (click)="setActive(2)">
-          <img src="/images/Köfte.jpg" alt="Hamburger" class="recipe-card-image" />
-          <div class="recipe-card-info">
-            <span class="recipe-card-name">Hamburger</span>
-            <span class="recipe-card-price">$30</span>
+          <div class="recipe-card" (click)="setActive(2)">
+            <img src="/images/Köfte.jpg" alt="Hamburger" class="recipe-card-image" />
+            <div class="recipe-card-info">
+              <span class="recipe-card-name">Hamburger</span>
+              <span class="recipe-card-price">$30</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="recipe-carousel-arrows" *ngIf="isMobile">
+        <button type="button" class="recipe-arrow recipe-arrow-prev" (click)="prev()" aria-label="Önceki">‹</button>
+        <button type="button" class="recipe-arrow recipe-arrow-next" (click)="next()" aria-label="Sonraki">›</button>
+      </div>
       
-      
-      <div class="recipe-pagination">
-        <span class="pagination-dot" [class.active]="activeIndex === 0"></span>
-        <span class="pagination-dot" [class.active]="activeIndex === 1"></span>
-        <span class="pagination-dot" [class.active]="activeIndex === 2"></span>
+      <div class="recipe-pagination recipe-pagination-mobile" *ngIf="isMobile">
+        <span class="pagination-dot" [class.active]="activeIndex === 0" (click)="setActive(0)"></span>
+        <span class="pagination-dot" [class.active]="activeIndex === 1" (click)="setActive(1)"></span>
+        <span class="pagination-dot" [class.active]="activeIndex === 2" (click)="setActive(2)"></span>
       </div>
     </div>
   </div>
