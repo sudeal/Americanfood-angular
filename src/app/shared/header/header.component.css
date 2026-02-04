@@ -1,0 +1,99 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 22px 0;
+    min-height: 100px;
+    overflow: visible;
+    z-index: 100; /* Header her zaman üstte */
+    background-color: transparent;
+  }
+  
+  /* =========================
+     HEADER İÇERİK
+     ========================= */
+  .header-inner {
+    position: relative;
+    z-index: 101; /* Header içeriği her zaman üstte */
+  
+    width: min(1980px, calc(100% - 64px));
+    margin: 0 auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* =========================
+     BRAND
+     ========================= */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .brand-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .brand-subtitle {
+    font-size: 12px;
+    opacity: 0.65;
+    margin-top: 4px;
+  }
+  
+  /* =========================
+     NAV
+     ========================= */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Aralık artırıldı */
+    position: relative;
+    z-index: 101; /* Header içeriği her zaman üstte */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #111;
+    font-size: 18px; /* Font boyutu büyütüldü */
+    font-weight: 600;
+    opacity: 0.95;
+    white-space: nowrap; /* Linklerin kırılmasını engelle */
+  }
+  
+  .nav-link.is-active {
+    font-weight: 800;
+  }
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  @media (max-width: 900px) {
+    .nav {
+      gap: 24px; /* Mobilde de aralık korundu */
+    }
+    
+    .nav-link {
+      font-size: 16px; /* Mobilde biraz küçük */
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .nav {
+      display: none;
+    }
+  }

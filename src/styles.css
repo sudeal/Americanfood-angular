@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Genel sayfa genişliği + Nunito Sans varsayılan font */
+html, body {
+  max-width: 1980px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+app-root {
+  display: block;
+  overflow: visible;
+  height: 100vh;
+  position: relative;
+}

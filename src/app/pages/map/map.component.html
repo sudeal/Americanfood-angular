@@ -1,0 +1,32 @@
+<section class="map-section">
+  <div class="map-background" aria-hidden="true">
+    <div class="map-info-card-cover" aria-hidden="true"></div>
+    <iframe
+      class="map-iframe"
+      [src]="mapEmbedUrl"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Map">
+    </iframe>
+  </div>
+  <div class="map-container">
+    <div class="card map-card">
+      <div class="card-body text-start">
+        <h5 class="card-title map-card-title">Contact Us</h5>
+        <form class="map-form">
+          <div class="map-form-group">
+            <input type="text" class="form-control" placeholder="Your Name" />
+          </div>
+          <div class="map-form-group">
+            <input type="text" class="form-control" placeholder="Gender" />
+          </div>
+          <div class="map-form-group">
+            <textarea class="form-control map-textarea" placeholder="Messages" rows="4"></textarea>
+          </div>
+          <button type="button" class="btn btn-teal map-btn">Send Messages</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

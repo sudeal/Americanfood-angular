@@ -1,0 +1,138 @@
+/* Footer - turkuaz arka plan, ekran görüntüsü gibi */
+.site-footer {
+  width: 100%;
+  background-color: #6fd9cb;
+  padding: 56px 48px 48px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px 40px;
+  align-items: start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-heading {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 700; /* Bold */
+  color: #fff;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.02em;
+}
+
+/* "Your Company" başlığı 25px */
+.footer-col:first-child .footer-heading {
+  font-size: 25px;
+}
+
+.footer-address,
+.footer-website,
+.footer-item,
+.footer-copyright {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 700; /* Bold */
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-link {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 700; /* Bold */
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Sağ kolon - logo + marka + copyright + sosyal ikonlar */
+.footer-col-brand {
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-brand-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 700; /* Bold */
+  color: #fff;
+}
+
+.footer-brand-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 700; /* Bold */
+  color: #fff;
+  opacity: 0.95;
+}
+
+.footer-social {
+  display: block;
+  width: auto;
+  max-width: 140px;
+  height: auto;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 24px 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

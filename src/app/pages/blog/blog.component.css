@@ -1,0 +1,311 @@
+.blog-section {
+  width: 100%;
+  max-width: 1980px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.blog-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 5;
+  position: relative;
+}
+
+.blog-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 33.33px;
+  font-weight: 700; /* Bold */
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.blog-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 400; /* Regular */
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Kart + şef fotoğrafı sarmalayıcı – relative, şef absolute ile konumlanacak */
+.blog-card-wrap {
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 720px;
+  overflow: visible;
+  min-height: 300px;
+}
+
+/* Şef katmanı – kartın üzerinde, sol tarafta; kartın bottom-right’ına göre değil sol altına hizalı (2. foto gibi) */
+.blog-card-chef-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Şef fotoğrafı – kartın solunda, altta hizalı; baş kartın üstüne taşar, gövde kartın sol kenarını overlap eder */
+.blog-card-chef {
+  position: absolute;
+  left: -72px;
+  bottom: 0;
+  height: 320px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: bottom left;
+  pointer-events: none;
+  mix-blend-mode: darken;
+}
+
+/* Turkuaz kart – relative, yükseklik azaltıldı */
+.blog-card {
+  width: 100%;
+  max-width: 720px;
+  min-height: 300px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #2dd4bf;
+  background-image:
+    linear-gradient(
+      to right,
+      #2dd4bf 0%,
+      #2dd4bf 42%,
+      rgba(45, 212, 191, 0.97) 48%,
+      rgba(45, 212, 191, 0.88) 54%,
+      rgba(45, 212, 191, 0.72) 60%,
+      rgba(45, 212, 191, 0.48) 68%,
+      rgba(45, 212, 191, 0.22) 76%,
+      rgba(45, 212, 191, 0.06) 84%,
+      transparent 92%
+    ),
+    url('/images/arkaplanyemek.jpg');
+  background-position: 0 0, right center;
+  background-size: 100% 100%, 85% 100%;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* Yazılar - kartın içinde; sol padding şef ile çakışmasın diye */
+.blog-card-text-side {
+  position: relative;
+  z-index: 1;
+  padding: 40px 32px 36px 130px;
+  max-width: 85%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.blog-card-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 400; /* Regular */
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 24px 0;
+}
+
+.blog-card-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700; /* Bold */
+  line-height: 1.3;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.blog-card-role {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700; /* Bold */
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .blog-section {
+    padding: 40px 24px;
+  }
+
+  .blog-container {
+    padding-top: 100px;
+  }
+
+  .blog-title {
+    font-size: 56px;
+  }
+
+  .blog-card-wrap {
+    margin-top: 36px;
+    min-height: 280px;
+  }
+
+  .blog-card-chef {
+    left: -60px;
+    bottom: 0;
+    height: 300px;
+    max-width: 200px;
+  }
+
+  .blog-card {
+    min-height: 280px;
+    border-radius: 20px;
+  }
+
+  .blog-card-text-side {
+    padding: 36px 28px 32px 110px;
+    max-width: 82%;
+  }
+
+  .blog-card-text {
+    font-size: 15px;
+  }
+
+  .blog-card-name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-section {
+    padding: 30px 16px;
+  }
+
+  .blog-container {
+    padding-top: 80px;
+  }
+
+  .blog-title {
+    font-size: 42px;
+  }
+
+  .blog-description {
+    font-size: 15px;
+  }
+
+  .blog-card-wrap {
+    margin-top: 28px;
+    min-height: 260px;
+  }
+
+  .blog-card-chef {
+    left: -48px;
+    bottom: 0;
+    height: 270px;
+    max-width: 160px;
+  }
+
+  .blog-card {
+    min-height: 260px;
+    border-radius: 18px;
+  }
+
+  .blog-card-text-side {
+    padding: 32px 24px 28px 80px;
+    max-width: 85%;
+  }
+
+  .blog-card-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .blog-card-name {
+    font-size: 20px;
+  }
+
+  .blog-card-role {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-section {
+    padding: 20px 16px;
+  }
+
+  .blog-container {
+    padding-top: 60px;
+  }
+
+  .blog-title {
+    font-size: 32px;
+  }
+
+  .blog-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .blog-card-wrap {
+    margin-top: 20px;
+    min-height: 220px;
+  }
+
+  .blog-card-chef {
+    left: -36px;
+    bottom: 0;
+    height: 230px;
+    max-width: 130px;
+  }
+
+  .blog-card {
+    min-height: 220px;
+    border-radius: 16px;
+  }
+
+  .blog-card-text-side {
+    padding: 24px 20px 20px 56px;
+    max-width: 90%;
+  }
+
+  .blog-card-text {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .blog-card-name {
+    font-size: 18px;
+  }
+
+  .blog-card-role {
+    font-size: 13px;
+  }
+}

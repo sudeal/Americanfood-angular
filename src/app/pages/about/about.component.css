@@ -1,0 +1,229 @@
+.about-section {
+  width: 100%;
+  max-width: 1980px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  position: relative;
+  z-index: 1;
+  height: 100vh; 
+  max-height: 100vh; 
+  overflow: hidden; 
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+
+.about-side-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  min-width: 280px;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.about-side-left {
+  left: 0;
+  background-image: url('/images/ikiliresim.jpg');
+  background-position: left center;
+}
+
+.about-side-right {
+  right: 0;
+  background-image: url('/images/ikiliresim.jpg');
+  background-position: right center;
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px; 
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 5;
+  position: relative;
+}
+
+.about-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 33.33px;
+  font-weight: 700; /* Bold */
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.about-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16.67px;
+  font-weight: 400; /* Regular */
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+.about-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.about-step {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #e0e0e0;
+  flex-shrink: 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.about-step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-step-arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23111'%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .about-section {
+    padding: 40px 24px;
+  }
+
+  .about-side-image {
+    width: 24%;
+    min-width: 220px;
+  }
+  
+  .about-steps {
+    margin-top: 36px;
+    gap: 18px;
+  }
+
+  .about-step {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+
+  .about-step-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 30px 16px;
+  }
+
+  .about-side-image {
+    width: 20%;
+    min-width: 160px;
+  }
+  
+  .about-container {
+    padding-top: 80px;
+  }
+
+  .about-steps {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  .about-step {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+
+  .about-step-arrow {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .about-title {
+    font-size: 42px;
+  }
+  
+  .about-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-section {
+    padding: 20px 16px;
+  }
+
+  .about-side-image {
+    width: 18%;
+    min-width: 100px;
+  }
+  
+  .about-container {
+    padding-top: 60px;
+  }
+
+  .about-steps {
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  .about-step {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+
+  .about-step-arrow {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .about-title {
+    font-size: 32px;
+  }
+  
+  .about-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
