@@ -1,9 +1,7 @@
 <div class="home-wrapper">
   <section class="hero-section">
-   
     <header class="site-header">
       <div class="header-inner">
-        
         <a class="brand" routerLink="/">
           <img class="brand-logo" src="/images/logo.jpg" alt="American Food logo" />
           <div class="brand-text">
@@ -11,8 +9,8 @@
             <div class="brand-subtitle">your logo here</div>
           </div>
         </a>
-    
-       
+
+        <!-- Desktop Nav (aynı) -->
         <nav class="nav">
           <a class="nav-link is-active" routerLink="/">Home</a>
           <a class="nav-link" routerLink="/about">About</a>
@@ -21,23 +19,51 @@
           <a class="nav-link" routerLink="/store">Store</a>
           <a class="nav-link" routerLink="/contact">Contact</a>
         </nav>
+
+        <!-- ✅ Mobile Hamburger Button (telefon boyutunda görünür) -->
+        <button
+          type="button"
+          class="hamburger-btn"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="isMenuOpen"
+          aria-label="Open menu"
+        >
+          <!-- Basit hamburger icon (SVG) -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- ✅ Mobile Dropdown Menu (layout'u bozmaz, absolute) -->
+      <div class="mobile-menu" [class.is-open]="isMenuOpen">
+        <a class="mobile-link" routerLink="/" (click)="closeMenu()">Home</a>
+        <a class="mobile-link" routerLink="/about" (click)="closeMenu()">About</a>
+        <a class="mobile-link" routerLink="/menu" (click)="closeMenu()">Menu</a>
+        <a class="mobile-link" routerLink="/blog" (click)="closeMenu()">Blog</a>
+        <a class="mobile-link" routerLink="/store" (click)="closeMenu()">Store</a>
+        <a class="mobile-link" routerLink="/contact" (click)="closeMenu()">Contact</a>
       </div>
     </header>
 
-    
     <img class="hero-yellow-shape" src="/images/shapes.jpg" alt="" />
-    
     <img class="hero-blue-shape" src="/images/blueshape.png" alt="" />
-    
+
     <div class="hero-container">
       <div class="hero-image-wrapper hero-image-left">
         <img src="/images/yemek.jpg" alt="Food" class="hero-image" />
       </div>
+
       <div class="hero-content">
         <h1 class="hero-title">Popular belief simply random text roots in a piece of classical</h1>
-        <p class="hero-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <p class="hero-description">
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
         <button class="hero-button">Get Started</button>
       </div>
+
       <div class="hero-image-wrapper hero-image-right">
         <img src="/images/hamburger.jpg" alt="Hamburger" class="hero-image" />
       </div>

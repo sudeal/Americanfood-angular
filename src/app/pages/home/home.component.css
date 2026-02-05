@@ -4,44 +4,94 @@
   height: 100vh;
   scroll-behavior: smooth;
   position: relative;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
   width: 100%;
-  padding-top: 0; 
+  padding-top: 0;
 }
 
 .hero-section {
   width: 100%;
   max-width: 1980px;
   margin: 0 auto;
-  padding: 0 32px 200px 0; 
+  padding: 0 32px 200px 0;
   position: relative;
   z-index: 1;
-  height: 100vh; 
-  max-height: 100vh; 
-  overflow: hidden; 
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   box-sizing: border-box;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 
-
 .site-header {
   position: relative;
   width: 100%;
-  padding: 22px 0 120px 0; 
+  padding: 22px 0 120px 0;
   min-height: 100px;
   overflow: visible;
-  z-index: 50; 
+  z-index: 50;
 }
 
 .header-inner {
   position: relative;
-  z-index: 51; 
+  z-index: 51;
   width: min(1980px, calc(100% - 64px));
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* ✅ Hamburger button (default: gizli) */
+.hamburger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #111;
+  position: relative;
+  z-index: 60; 
+}
+
+.hamburger-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Mobile dropdown menu (default: kapalı) */
+.mobile-menu {
+  display: none; /* sadece mobilde açacağız */
+  position: absolute;
+  right: 16px;
+  top: 86px; /* header yüksekliğine göre; gerekirse 76-96 arası oynat */
+  width: 220px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  z-index: 70; /* her şeyin üstünde */
+}
+
+.mobile-menu.is-open {
+  display: block;
+}
+
+.mobile-link {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #111;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mobile-link:hover {
+  background: rgba(78, 205, 196, 0.14); /* turkuaz hover */
 }
 
 .brand {
@@ -62,14 +112,14 @@
 .brand-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 20.83px;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
 }
 
 .brand-subtitle {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16.67px;
-  font-weight: 400; /* Regular */
-  color: #4ECDC4; /* turkuaz */
+  font-weight: 400;
+  color: #4ECDC4;
   margin-top: 4px;
 }
 
@@ -92,10 +142,10 @@
 }
 
 .nav-link.is-active {
-  font-weight: 600; /* Diğer linklerle aynı kalınlık */
+  font-weight: 600;
 }
 
-/* Sarı şekil - sadece hero-section içinde */
+
 .hero-yellow-shape {
   position: absolute;
   top: 0;
@@ -117,23 +167,23 @@
   width: 520px;
   height: auto;
   object-fit: contain;
-  z-index: 10; /* Yemek resminin üstünde görünsün */
+  z-index: 10;
   pointer-events: none;
 }
 
 .hero-container {
   position: relative;
   width: 100%;
-  height: 100%; /* Parent'ın yüksekliğini kullan */
+  height: 100%;
   z-index: 2;
 }
 
 .hero-image-wrapper {
   position: absolute;
   top: 0;
-  margin-top: -40px; /* Resmi biraz yukarı taşı ama mavi şekle yakın olsun */
-  margin-bottom: -100px; /* Alt kısmı mavi şeklin üstüne taşsın */
-  z-index: 1; /* Normal z-index, mavi şekil üstte olacak */
+  margin-top: -40px;
+  margin-bottom: -100px;
+  z-index: 1;
 }
 
 .hero-image-left {
@@ -142,7 +192,7 @@
 
 .hero-image-right {
   right: 0;
-  top: 140px; /* Hamburger resmini daha aşağı kaydır */
+  top: 140px;
 }
 
 .hero-image {
@@ -153,13 +203,13 @@
 }
 
 .hero-image-right .hero-image {
-  width: 400px; /* Hamburger resmini küçült */
+  width: 400px;
 }
 
 .hero-content {
   position: absolute;
   left: 50%;
-  top: 30%; /* Daha yukarı taşındı */
+  top: 38%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -167,13 +217,13 @@
   text-align: center;
   width: 100%;
   max-width: 960px;
-  z-index: 5; /* Sarı şeklin ve yemek resminin üstünde görünsün */
+  z-index: 5;
 }
 
 .hero-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 50px;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
   line-height: 1.2;
   color: #111;
   margin: 0 0 24px 0;
@@ -184,7 +234,7 @@
 .hero-description {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16.67px;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
   line-height: 1.6;
   color: #666;
   margin: 0 0 32px 0;
@@ -200,7 +250,7 @@
   border-radius: 8px;
   padding: 14px 32px;
   font-size: 16.67px;
-  font-weight: 400; /* Regular */
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -214,28 +264,28 @@
   .hero-image-left .hero-image {
     width: 400px;
   }
-  
+
   .hero-image-right .hero-image {
-    width: 350px; /* Hamburger resmi daha küçük */
+    width: 350px;
   }
-  
+
   .hero-image-wrapper {
     margin-top: -30px;
     margin-bottom: -80px;
   }
-  
+
   .hero-image-right {
-    top: 100px; /* Mobilde daha aşağı */
+    top: 100px;
   }
-  
+
   .hero-section {
     padding: 0 24px 180px 0;
   }
-  
+
   .site-header {
     padding: 22px 0 120px 0;
   }
-  
+
   .hero-container {
     height: 100%;
   }
@@ -254,99 +304,96 @@
   .hero-section {
     height: auto;
     min-height: 100vh;
-    overflow: visible;
+    overflow: hidden; /* Mavi/sarı şekillerin recipe bölümüne taşmasını engelle */
     padding: 0 16px 60px 16px;
+    /* Sarı + turkuaz birleşik arka plan (mobilde şekiller yerine) */
+    background: linear-gradient(160deg, rgba(255, 235, 180, 0.4) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(78, 205, 196, 0.25) 100%);
+  }
+
+  .hero-yellow-shape,
+  .hero-blue-shape {
+    display: none; /* Mobilde ayrı şekilleri kaldır, taşma/bozulma olmasın */
   }
 
   .hero-container {
     min-height: auto;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 8px; /* Yazıları yukarı taşımak için azaltıldı */
   }
-  
+
   .hero-content {
     position: relative;
     left: auto;
     top: auto;
     transform: none;
-    padding: 24px 16px;
-    margin-top: 24px;
+    padding: 16px 16px; /* Yazıları yukarı taşımak için azaltıldı */
+    margin-top: 8px; /* Yazıları yukarı taşımak için azaltıldı */
     order: 3;
     width: 100%;
     max-width: 100%;
   }
-  
+
   .hero-image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 320px; /* Resimleri küçültmek için 400px'ten 320px'e düşürüldü */
     margin: 0 auto;
     left: auto;
     top: auto;
     right: auto;
   }
-  
+
   .hero-image-left {
     margin-bottom: 0;
     order: 1;
   }
-  
+
   .hero-image-right {
     margin-top: 0;
     order: 2;
   }
-  
+
   .hero-image {
     width: 100%;
     max-width: 100%;
   }
-  
+
   .hero-title {
     font-size: 38px;
     line-height: 1.2;
     text-align: center;
   }
-  
+
   .hero-description {
     font-size: 15px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-button {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .site-header {
     padding: 16px 0 40px 0;
   }
-  
+
   .header-inner {
     width: calc(100% - 32px);
   }
-  
+
   .nav {
     gap: 20px;
   }
-  
+
   .nav-link {
     font-size: 14px;
   }
 
-  .hero-yellow-shape {
-    width: 80%;
-    max-width: 400px;
-  }
-
-  .hero-blue-shape {
-    width: 70%;
-    max-width: 360px;
-    transform: translateY(15px);
-  }
 }
 
 @media (max-width: 650px) {
@@ -355,25 +402,25 @@
   }
 
   .hero-content {
-    padding: 20px 12px;
-    margin-top: 16px;
+    padding: 12px 12px; /* Yazıları yukarı taşımak için azaltıldı */
+    margin-top: 4px; /* Yazıları yukarı taşımak için azaltıldı */
   }
 
   .hero-title {
     font-size: 28px;
     line-height: 1.25;
   }
-  
+
   .hero-description {
     font-size: 14px;
     max-width: 100%;
   }
-  
+
   .hero-button {
     padding: 12px 24px;
     font-size: 15px;
   }
-  
+
   .site-header {
     padding: 12px 0 24px 0;
   }
@@ -381,9 +428,16 @@
   .header-inner {
     width: calc(100% - 24px);
   }
-  
+
+  /* ✅ Mobilde linkler yok, hamburger var */
   .nav {
     display: none;
+  }
+
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .brand-title {
@@ -400,18 +454,7 @@
   }
 
   .hero-image-wrapper {
-    max-width: 320px;
-  }
-
-  .hero-yellow-shape {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .hero-blue-shape {
-    width: 75%;
-    max-width: 280px;
-    transform: translateY(10px);
+    max-width: 260px; /* Resimleri küçültmek için 320px'ten 260px'e düşürüldü */
   }
 }
 
@@ -422,8 +465,8 @@
   }
 
   .hero-content {
-    padding: 16px 8px;
-    margin-top: 12px;
+    padding: 10px 8px; /* Yazıları yukarı taşımak için azaltıldı */
+    margin-top: 2px; /* Yazıları yukarı taşımak için azaltıldı */
   }
 
   .hero-title {
@@ -456,14 +499,6 @@
   }
 
   .hero-image-wrapper {
-    max-width: 280px;
-  }
-
-  .hero-yellow-shape {
-    max-width: 260px;
-  }
-
-  .hero-blue-shape {
-    max-width: 220px;
+    max-width: 240px; /* Resimleri küçültmek için 280px'ten 240px'e düşürüldü */
   }
 }

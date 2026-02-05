@@ -17,4 +17,13 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }
