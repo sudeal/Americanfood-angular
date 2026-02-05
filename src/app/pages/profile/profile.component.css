@@ -156,6 +156,11 @@
   .profile-text {
     font-size: 14px;
   }
+
+  .profile-social {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -172,5 +177,10 @@
   }
   .profile-text {
     font-size: 13px;
+  }
+
+  .profile-social {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

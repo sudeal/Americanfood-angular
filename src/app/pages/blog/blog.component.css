@@ -292,7 +292,7 @@
   }
 
   .blog-card-text-side {
-    padding: 24px 20px 20px 88px;
+    padding: 24px 20px 20px 120px; /* Telefon boyutunda yazıyı sağa kaydırmak için sol padding artırıldı */
     max-width: 90%;
   }
 
@@ -327,7 +327,7 @@
     min-height: 200px;
   }
   .blog-card-text-side {
-    padding: 20px 16px 16px 72px;
+    padding: 20px 16px 16px 100px; /* Telefon boyutunda yazıyı sağa kaydırmak için sol padding artırıldı */
   }
   .blog-card-name {
     font-size: 16px;
