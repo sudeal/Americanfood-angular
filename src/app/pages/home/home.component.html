@@ -10,7 +10,7 @@
           </div>
         </a>
 
-        <!-- Desktop Nav (aynı) -->
+        
         <nav class="nav">
           <a class="nav-link is-active" routerLink="/">Home</a>
           <a class="nav-link" routerLink="/about">About</a>
@@ -20,7 +20,7 @@
           <a class="nav-link" routerLink="/contact">Contact</a>
         </nav>
 
-        <!-- ✅ Mobile Hamburger Button (telefon boyutunda görünür) -->
+        
         <button
           type="button"
           class="hamburger-btn"
@@ -28,16 +28,11 @@
           [attr.aria-expanded]="isMenuOpen"
           aria-label="Open menu"
         >
-          <!-- Basit hamburger icon (SVG) -->
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
+          <i class="bi" [class.bi-list]="!isMenuOpen" [class.bi-x-lg]="isMenuOpen"></i>
         </button>
       </div>
 
-      <!-- ✅ Mobile Dropdown Menu (layout'u bozmaz, absolute) -->
+      
       <div class="mobile-menu" [class.is-open]="isMenuOpen">
         <a class="mobile-link" routerLink="/" (click)="closeMenu()">Home</a>
         <a class="mobile-link" routerLink="/about" (click)="closeMenu()">About</a>
