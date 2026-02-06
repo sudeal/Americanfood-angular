@@ -1,6 +1,5 @@
 .about-section {
   width: 100%;
-  max-width: 1980px;
   margin: 0 auto;
   padding: 40px 32px;
   position: relative;
@@ -198,6 +197,11 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .about-side-image {
@@ -205,12 +209,20 @@
   }
   
   .about-container {
-    padding-top: 60px;
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .about-content {
+    justify-content: center;
   }
 
   .about-steps {
     margin-top: 24px;
     gap: 10px;
+    justify-content: center;
   }
 
   .about-step {
@@ -226,32 +238,51 @@
   
   .about-title {
     font-size: 32px;
+    text-align: center;
   }
   
   .about-description {
     font-size: 14px;
     max-width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 16px 12px;
+    padding: 20px 12px;
     background-image: url('/images/ikiliresim.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .about-side-image {
     display: none;
   }
   .about-container {
-    padding-top: 40px;
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .about-content {
+    justify-content: center;
   }
   .about-title {
-    font-size: 26px;
+    font-size: 24px;
+    text-align: center;
   }
   .about-description {
     font-size: 13px;
+    text-align: center;
+  }
+  .about-steps {
+    justify-content: center;
+    margin-top: 20px;
   }
 }
