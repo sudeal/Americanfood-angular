@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrl: './map.component.css'
 })
 export class MapComponent {
-  /** Google Maps embed URL – istediğin konumu Google Maps'ten "Paylaş > Haritayı yerleştir" ile alıp buraya yapıştırabilirsin. */
+ 
   mapEmbedUrl: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {

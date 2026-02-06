@@ -137,12 +137,20 @@
 @media (max-width: 650px) {
   .profile-section {
     padding: 20px 16px;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .profile-container {
     padding-left: 16px;
     padding-right: 16px;
     gap: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   .profile-image-wrap {
@@ -151,10 +159,12 @@
 
   .profile-title {
     font-size: 28px;
+    text-align: center;
   }
 
   .profile-text {
     font-size: 14px;
+    text-align: center;
   }
 
   .profile-social {
@@ -165,18 +175,28 @@
 
 @media (max-width: 480px) {
   .profile-section {
-    padding: 16px 12px;
+    padding: 20px 12px;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .profile-container {
     padding-left: 12px;
     padding-right: 12px;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
   .profile-title {
     font-size: 24px;
+    text-align: center;
   }
   .profile-text {
     font-size: 13px;
+    text-align: center;
   }
 
   .profile-social {

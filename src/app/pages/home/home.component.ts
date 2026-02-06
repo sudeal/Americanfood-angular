@@ -26,4 +26,34 @@ export class HomeComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  private scrollToSection(sectionId: string, event?: Event) {
+    if (event) {
+      event.preventDefault();
+    }
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToAbout(event?: Event) {
+    this.scrollToSection('about-section', event);
+  }
+
+  scrollToRecipe(event?: Event) {
+    this.scrollToSection('recipe-section', event);
+  }
+
+  scrollToBlog(event?: Event) {
+    this.scrollToSection('blog-section', event);
+  }
+
+  scrollToProfile(event?: Event) {
+    this.scrollToSection('profile-section', event);
+  }
+
+  scrollToMap(event?: Event) {
+    this.scrollToSection('map-section', event);
+  }
 }

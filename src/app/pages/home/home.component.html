@@ -13,11 +13,11 @@
         
         <nav class="nav">
           <a class="nav-link is-active" routerLink="/">Home</a>
-          <a class="nav-link" routerLink="/about">About</a>
-          <a class="nav-link" routerLink="/menu">Menu</a>
-          <a class="nav-link" routerLink="/blog">Blog</a>
-          <a class="nav-link" routerLink="/store">Store</a>
-          <a class="nav-link" routerLink="/contact">Contact</a>
+          <a class="nav-link" href="#" (click)="scrollToAbout($event)">About</a>
+          <a class="nav-link" href="#" (click)="scrollToRecipe($event)">Menu</a>
+          <a class="nav-link" href="#" (click)="scrollToBlog($event)">Blog</a>
+          <a class="nav-link" href="#" (click)="scrollToProfile($event)">Store</a>
+          <a class="nav-link" href="#" (click)="scrollToMap($event)">Contact</a>
         </nav>
 
         
@@ -35,11 +35,11 @@
       
       <div class="mobile-menu" [class.is-open]="isMenuOpen">
         <a class="mobile-link" routerLink="/" (click)="closeMenu()">Home</a>
-        <a class="mobile-link" routerLink="/about" (click)="closeMenu()">About</a>
-        <a class="mobile-link" routerLink="/menu" (click)="closeMenu()">Menu</a>
-        <a class="mobile-link" routerLink="/blog" (click)="closeMenu()">Blog</a>
-        <a class="mobile-link" routerLink="/store" (click)="closeMenu()">Store</a>
-        <a class="mobile-link" routerLink="/contact" (click)="closeMenu()">Contact</a>
+        <a class="mobile-link" href="#" (click)="scrollToAbout($event); closeMenu()">About</a>
+        <a class="mobile-link" href="#" (click)="scrollToRecipe($event); closeMenu()">Menu</a>
+        <a class="mobile-link" href="#" (click)="scrollToBlog($event); closeMenu()">Blog</a>
+        <a class="mobile-link" href="#" (click)="scrollToProfile($event); closeMenu()">Store</a>
+        <a class="mobile-link" href="#" (click)="scrollToMap($event); closeMenu()">Contact</a>
       </div>
     </header>
 
@@ -65,12 +65,12 @@
     </div>
   </section>
 
-  <app-recipe />
+  <div id="recipe-section"><app-recipe /></div>
   <app-order />
   <app-taste />
-  <app-about />
-  <app-blog />
-  <app-profile />
-  <app-map />
+  <div id="about-section"><app-about /></div>
+  <div id="blog-section"><app-blog /></div>
+  <div id="profile-section"><app-profile /></div>
+  <div id="map-section"><app-map /></div>
   <app-footer />
 </div>
